@@ -4,10 +4,14 @@ Reverse Chronological Order:
 
 ## master
 
-https://github.com/sgruhier/capistrano-db-tasks/compare/v0.6...HEAD
+https://github.com/sgruhier/capistrano-db-tasks/compare/v0.7...HEAD
 
 * Your contribution here!
 * Added support for [zstd compressor](http://facebook.github.io/zstd/) (@ocha)
+
+# 0.7 (Otc 03 2022)
+
+* Add command to drop DB and recreate DB before loading dump file when pulling from remote -> local (@pandabamboo90)
 
 # 0.6 (Dec 14 2016)
 

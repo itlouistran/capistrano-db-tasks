@@ -1,6 +1,6 @@
-# CapistranoDbTasks | [![Gem Downloads](http://img.shields.io/gem/dt/capistrano-db-tasks.svg)](https://rubygems.org/gems/capistrano-db-tasks) [![Code Climate](https://codeclimate.com/github/sgruhier/capistrano-db-tasks/badges/gpa.svg)](https://codeclimate.com/github/sgruhier/capistrano-db-tasks) [![Gem Version](https://badge.fury.io/rb/capistrano-db-tasks.svg)](http://badge.fury.io/rb/capistrano-db-tasks)
+# CapistranoDbTasks | [![Gem Downloads](https://img.shields.io/gem/dt/capistrano-db-tasks.svg)](https://rubygems.org/gems/capistrano-db-tasks) [![Code Climate](https://codeclimate.com/github/sgruhier/capistrano-db-tasks/badges/gpa.svg)](https://codeclimate.com/github/sgruhier/capistrano-db-tasks) [![Gem Version](https://badge.fury.io/rb/capistrano-db-tasks.svg)](https://badge.fury.io/rb/capistrano-db-tasks)
 
-Add database AND assets tasks to capistrano to a Rails project. It only works with capistrano 3. Older versions until 0.3 works with capistrano 2.
+Add database AND assets tasks to capistrano to a Rails project. It works with capistrano 3+
 
 Currently
 
@@ -63,7 +63,7 @@ Add to .gitignore
 /db/*.sql
 ```
 
-[How to install bzip2 on Windows](http://stackoverflow.com/a/25625988/3324219)
+[How to install bzip2 on Windows](https://stackoverflow.com/a/25625988/3324219)
 
 ## Available tasks
 
@@ -103,17 +103,14 @@ cap development db:local:load DUMP_FILE=db/myapp_production_2018-01-10-150434.sq
 
 ## Contributors
 
-* tilsammans (http://github.com/tilsammansee)
-* bigfive    (http://github.com/bigfive)
-* jakemauer  (http://github.com/jakemauer)
-* tjoneseng  (http://github.com/tjoneseng)
-* numbata    (http://github.com/numbata)
-* rafaelsales (http://github.com/rafaelsales)
-* rdeshpande (http://github.com/rdeshpande)
-
-## TODO
-
-* May be change project's name as it's not only database tasks now :)
-* Add tests
+* tilsammans (https://github.com/tilsammansee)
+* bigfive    (https://github.com/bigfive)
+* jakemauer  (https://github.com/jakemauer)
+* tjoneseng  (https://github.com/tjoneseng)
+* numbata    (https://github.com/numbata)
+* rafaelsales (https://github.com/rafaelsales)
+* rdeshpande (https://github.com/rdeshpande)
+* itlouistran (https://github.com/itlouistran)
+* pandabamboo90 (https://github.com/pandabamboo90)
 
 Copyright (c) 2009 [Sébastien Gruhier - XILINUS], released under the MIT license

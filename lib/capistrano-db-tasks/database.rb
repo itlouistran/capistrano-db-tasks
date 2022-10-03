@@ -168,8 +168,12 @@ module Database
     # cleanup = true removes the mysqldump file after loading, false leaves it in db/
     def load(file, cleanup)
       unzip_file = File.join(File.dirname(file), File.basename(file, ".#{compressor.file_extension}"))
-      puts "executing local: #{compressor.decompress(file)} && #{import_cmd(unzip_file)}"
-      execute("#{compressor.decompress(file)} && #{import_cmd(unzip_file)}")
+
+      recreate_db_cmd = "DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bundle exec rake db:drop && bundle exec rake db:create"
+      cmd = "#{compressor.decompress(file)} && #{recreate_db_cmd} && #{import_cmd(unzip_file)}"
+      puts "executing local: #{cmd}"
+      execute(cmd)
+
       if cleanup
         puts "removing #{unzip_file}"
         File.unlink(unzip_file)
