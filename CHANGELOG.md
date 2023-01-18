@@ -9,6 +9,10 @@ https://github.com/sgruhier/capistrano-db-tasks/compare/v0.7...HEAD
 * Your contribution here!
 * Added support for [zstd compressor](http://facebook.github.io/zstd/) (@ocha)
 
+# 0.7.1 (Jan 19 2023)
+
+* Add new config `db_config_key` to support config files which has multiple DBs (Rails 6 >)
+
 # 0.7 (Otc 03 2022)
 
 * Add command to drop DB and recreate DB before loading dump file when pulling from remote -> local (@pandabamboo90)

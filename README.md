@@ -27,6 +27,9 @@ require 'capistrano-db-tasks'
 # if you haven't already specified
 set :rails_env, "production"
 
+# if you are using multiple DBs (Rails 6 >)
+set :db_config_key, :primary
+
 # if you want to remove the local dump file after loading
 set :db_local_clean, true
 
