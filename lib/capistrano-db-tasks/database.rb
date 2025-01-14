@@ -117,7 +117,7 @@ module Database
             end
           # Remove all warnings, errors and artefacts produced by bunlder, rails and other useful tools
           config_content = dirty_config_content.match(/#{DBCONFIG_BEGIN_FLAG}(.*?)#{DBCONFIG_END_FLAG}/m)[1]
-          config_hash = YAML.load(config_content).each_with_object({}) { |(k, v), h| h[k.to_s] = v }
+          config_hash = YAML.load(config_content, aliases: true).each_with_object({}) { |(k, v), h| h[k.to_s] = v }
           @config = fetch(:db_config_key) ? config_hash[fetch(:db_config_key).to_s] : config_hash
         end
       end
