@@ -170,7 +170,8 @@ module Database
       raise "Error running command (status=#{status}): #{command}" if status != 0
 
       config_content = stdout.match(/#{DBCONFIG_BEGIN_FLAG}(.*?)#{DBCONFIG_END_FLAG}/m)[1]
-      @config = YAML.load(config_content, aliases: true).each_with_object({}) { |(k, v), h| h[k.to_s] = v }
+      config_hash = YAML.load(config_content, aliases: true).each_with_object({}) { |(k, v), h| h[k.to_s] = v }
+      @config = fetch(:db_config_key) ? config_hash[fetch(:db_config_key).to_s] : config_hash
     end
 
     # cleanup = true removes the mysqldump file after loading, false leaves it in db/
